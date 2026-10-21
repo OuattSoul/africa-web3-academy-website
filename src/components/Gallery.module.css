@@ -1,0 +1,15 @@
+.grid { display: grid; gap: var(--s-3); grid-template-columns: repeat(auto-fill, minmax(min(100%, 15rem), 1fr)); }
+.thumb { display: block; width: 100%; aspect-ratio: 4 / 3; overflow: hidden; border-radius: var(--r-md); background: var(--navy-100); }
+.thumb img { width: 100%; height: 100%; object-fit: cover; transition: transform var(--dur-3) var(--ease-out); }
+.thumb:hover img { transform: scale(1.04); }
+.video video { width: 100%; border-radius: var(--r-md); background: var(--brand-ink); }
+.dialog { margin: auto; max-width: min(92vw, 80rem); max-height: 92vh; padding: 0; border: 0; border-radius: var(--r-lg); background: var(--brand-ink); color: var(--white); }
+.dialog::backdrop { background: rgb(3 2 76 / 0.85); }
+.dialog[open] { animation: zoom var(--dur-2) var(--ease-out); }
+@keyframes zoom { from { opacity: 0; transform: scale(0.97); } }
+.figure img { max-height: 78vh; width: auto; margin-inline: auto; }
+.figure figcaption { display: flex; justify-content: space-between; gap: var(--s-4); padding: var(--s-3) var(--s-5); font-size: var(--fs-small); color: var(--text-on-dark-muted); }
+.controls { display: flex; justify-content: flex-end; gap: var(--s-2); padding: 0 var(--s-4) var(--s-4); }
+.controls button { display: grid; place-items: center; width: 44px; height: 44px; border-radius: 50%; border: 1px solid var(--border-on-dark); color: var(--white); }
+.controls button:hover { background: rgb(255 255 255 / 0.1); }
+.prev { transform: rotate(180deg); }

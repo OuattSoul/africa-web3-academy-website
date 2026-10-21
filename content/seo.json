@@ -1,0 +1,16 @@
+{
+  "/": { "title": "Africa Web3 Academy — Apprendre et construire avec la blockchain", "description": "Africa Web3 Academy forme, sensibilise et accompagne les talents et les organisations d'Afrique francophone pour comprendre et construire des solutions blockchain et Web3 utiles." },
+  "/formations": { "title": "Formations blockchain et Web3", "description": "Catalogue des formations d'Africa Web3 Academy : initiation à la blockchain, développement Web3, smart contracts, produit, marketing et communauté — en présentiel, en ligne ou hybride." },
+  "/organisations": { "title": "Solutions pour les organisations", "description": "Formation des équipes, sensibilisation, conseil, cadrage de cas d'usage et projets pilotes blockchain pour entreprises, administrations, ONG et établissements d'enseignement." },
+  "/projet": { "title": "Parlons de votre projet", "description": "Entreprises, administrations, ONG, établissements : décrivez votre besoin de formation, de sensibilisation ou d'accompagnement blockchain." },
+  "/evenements": { "title": "Événements", "description": "Hackathons, conférences, ateliers et rencontres organisés par Africa Web3 Academy, et participations de l'académie aux événements de l'écosystème." },
+  "/partenaires": { "title": "Partenaires", "description": "Partenariats académiques, éducatifs, communautaires, médiatiques, technologiques et stratégiques d'Africa Web3 Academy." },
+  "/partenaires/devenir-partenaire": { "title": "Devenir partenaire", "description": "Accueillir un club ou un hackathon, co-organiser un événement, partager des ressources : proposez un partenariat à Africa Web3 Academy." },
+  "/ressources": { "title": "Ressources", "description": "Guides, publications, études de cas et retours d'expérience d'Africa Web3 Academy pour apprendre et décider avec justesse." },
+  "/ressources/faq": { "title": "Questions fréquentes", "description": "Prérequis, modalités, coûts, attestations, formations pour les organisations : les réponses aux questions fréquentes sur Africa Web3 Academy." },
+  "/a-propos": { "title": "À propos", "description": "Mission, vision, approche pédagogique et équipe d'Africa Web3 Academy, initiative de formation blockchain et Web3 basée à Abidjan." },
+  "/contact": { "title": "Contact", "description": "Contactez Africa Web3 Academy : information, formation, accompagnement professionnel, partenariat ou intervention lors d'un événement." },
+  "/communaute": { "title": "Rejoindre la communauté", "description": "Étudiants, développeurs, professionnels et passionnés : rejoignez la communauté Africa Web3 Academy pour apprendre ensemble, participer aux ateliers et suivre les opportunités." },
+  "/confidentialite": { "title": "Politique de confidentialité", "description": "Comment Africa Web3 Academy collecte, utilise et protège les données transmises via ce site." },
+  "/mentions-legales": { "title": "Mentions légales", "description": "Informations légales relatives au site d'Africa Web3 Academy : éditeur, hébergement, propriété intellectuelle." }
+}

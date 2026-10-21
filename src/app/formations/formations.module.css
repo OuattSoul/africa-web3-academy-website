@@ -1,0 +1,51 @@
+.grid { display: grid; gap: var(--s-2) var(--s-7); grid-template-columns: repeat(auto-fill, minmax(min(100%, 22rem), 1fr)); }
+.item { display: flex; }
+.item > * { flex: 1; }
+@media (prefers-reduced-motion: no-preference) {
+  .item { animation: enter var(--dur-3) var(--ease-out) both; animation-delay: calc(var(--i) * 40ms); }
+}
+@keyframes enter { from { opacity: 0; transform: translateY(10px); } }
+.empty { padding: var(--s-7) var(--s-5); text-align: center; border: 1px dashed var(--border-input); border-radius: var(--r-lg); display: grid; gap: var(--s-2); }
+
+.legend { display: flex; flex-wrap: wrap; gap: var(--s-3) var(--s-6); margin-bottom: var(--s-6); font-size: var(--fs-small); color: var(--text-muted); }
+.legend span { display: inline-flex; gap: var(--s-2); align-items: center; }
+
+.modes { display: grid; gap: var(--s-5); grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr)); }
+.mode { padding-top: var(--s-4); border-top: 2px solid var(--brand-ink); display: grid; gap: var(--s-2); }
+.mode h3 { font-family: var(--font-display); font-weight: 500; font-size: 1.5rem; }
+.custom { display: grid; gap: var(--s-5); align-items: center; padding: clamp(1.5rem, 1rem + 2vw, 3rem); background: var(--brand-navy); color: var(--white); border-radius: var(--r-lg); }
+.custom h2 { color: var(--white); font-size: clamp(1.6rem, 1.2rem + 1.5vw, 2.4rem); }
+@media (min-width: 900px) { .custom { grid-template-columns: 1.5fr auto; } }
+
+/* ——— Detail ——— */
+.facts { display: grid; grid-template-columns: 1fr 1fr; gap: var(--s-4); padding: var(--s-5); border: 1px solid var(--border-on-dark); border-radius: var(--r-lg); background: rgb(255 255 255 / 0.04); }
+.facts dt { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-on-dark-muted); }
+.facts dd { font-weight: 700; color: var(--white); }
+.layout { display: grid; gap: var(--s-8); }
+.main { display: grid; gap: var(--s-8); min-width: 0; }
+.block { display: grid; gap: var(--s-4); }
+.block h2 { font-size: clamp(1.6rem, 1.3rem + 1.2vw, 2.25rem); }
+.cols { display: grid; gap: var(--s-6); grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr)); }
+.cols h3 { font-size: 1.0625rem; margin-bottom: var(--s-2); }
+.list { display: grid; gap: var(--s-2); padding-left: 1.2rem; }
+.list li::marker { color: var(--brand-blue); }
+.skills { display: flex; flex-wrap: wrap; gap: var(--s-2); }
+.skills li { padding: 0.3rem 0.8rem; background: var(--navy-50); border-radius: var(--r-pill); font-size: 0.875rem; font-weight: 600; }
+.program { counter-reset: p; border-top: 1px solid var(--border); }
+.program > li { counter-increment: p; display: grid; grid-template-columns: 3rem 1fr; gap: var(--s-1) var(--s-4); padding: var(--s-5) 0; border-bottom: 1px solid var(--border); }
+.program > li::before { content: counter(p, decimal-leading-zero); grid-row: span 3; font-family: var(--font-display); font-size: 1.5rem; color: var(--brand-blue); line-height: 1.2; }
+.program h3 { font-size: 1.125rem; }
+.program ul { display: flex; flex-wrap: wrap; gap: var(--s-1) var(--s-4); font-size: var(--fs-small); color: var(--text-muted); }
+.program ul li + li::before { content: "·"; margin-right: var(--s-4); }
+.deliverable { font-size: var(--fs-small); }
+.deliverable b { color: var(--brand-navy); }
+.method { padding: var(--s-5) var(--s-6); border-left: 3px solid var(--brand-blue); background: var(--navy-50); font-family: var(--font-display); font-size: 1.25rem; line-height: 1.45; }
+.aside { display: grid; gap: var(--s-5); align-content: start; }
+.sticky { display: grid; gap: var(--s-5); padding: var(--s-6); border-radius: var(--r-lg); background: var(--white); border: 1px solid var(--border); box-shadow: var(--shadow-1); }
+.sticky h2 { font-size: 1.5rem; }
+.sessions { display: grid; gap: var(--s-3); }
+.sessions li { padding: var(--s-3); border-radius: var(--r-md); background: var(--navy-50); font-size: var(--fs-small); }
+@media (min-width: 1000px) {
+  .layout { grid-template-columns: minmax(0, 1fr) 22rem; }
+  .sticky { position: sticky; top: calc(var(--header-h) + var(--s-5)); }
+}

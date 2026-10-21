@@ -1,0 +1,393 @@
+[
+  {
+    "slug": "developpeur-blockchain-web3",
+    "title": "Développeur Blockchain & Web3",
+    "domain": "developpement",
+    "level": "debutant",
+    "audiences": [
+      "etudiants",
+      "professionnels",
+      "developpeurs"
+    ],
+    "status": "confirme",
+    "featured": true,
+    "summary": "Un parcours complet pour devenir développeur Web3 full stack, construit autour d'un projet fil rouge : une plateforme de tokenisation immobilière déployée de bout en bout.",
+    "duration": "6 mois · 96 h (4 h par semaine)",
+    "durationBucket": "long",
+    "modalities": [],
+    "price": "300 000 FCFA",
+    "method": "« Build first, understand deeper » : 85 % de pratique, 15 % de théorie. On code dès le premier jour ; chaque concept est introduit au moment où il devient nécessaire au projet.",
+    "objectives": [
+      "Maîtriser les fondations du développement web moderne avant d'aborder le Web3.",
+      "Concevoir, tester et sécuriser des smart contracts Solidity.",
+      "Connecter une interface React à des contrats déployés.",
+      "Livrer une application décentralisée complète, auditée et documentée."
+    ],
+    "audience": [
+      "Profils non techniques disposant de bases théoriques sur la blockchain.",
+      "Personnes en reconversion visant le métier de développeur Web3.",
+      "Développeurs Web2 souhaitant se spécialiser."
+    ],
+    "prerequisites": [
+      "Bases théoriques sur la blockchain.",
+      "Disponibilité de 4 heures par semaine pendant 6 mois."
+    ],
+    "skills": [
+      "HTML, CSS, JavaScript ES6+, Git et GitHub",
+      "React, TypeScript, TailwindCSS",
+      "Solidity, Hardhat, Foundry, standards ERC-20 / ERC-721 / ERC-1155",
+      "Sécurité et audit : Slither, Mythril, tests d'invariants",
+      "Wagmi, Viem, RainbowKit, IPFS",
+      "Déploiement testnet et réseau principal (Polygon)"
+    ],
+    "program": [
+      {
+        "title": "Fondations développeur",
+        "items": [
+          "Environnement de travail, Git et terminal",
+          "HTML / CSS / JavaScript ES6+",
+          "Linux, npm / pnpm"
+        ],
+        "deliverable": "Landing page responsive « RealEstateChain » déployée"
+      },
+      {
+        "title": "React & frontend moderne",
+        "items": [
+          "React, Vite, TypeScript",
+          "TailwindCSS, shadcn/ui",
+          "Routage, gestion d'état, données"
+        ],
+        "deliverable": "Interface complète de la plateforme, données simulées"
+      },
+      {
+        "title": "Solidity — fondamentaux",
+        "items": [
+          "EVM, gas, storage et memory",
+          "ERC-20, ERC-721, ERC-1155",
+          "Tests unitaires avec Foundry, patterns OpenZeppelin"
+        ],
+        "deliverable": "4 contrats testés, déployés et vérifiés sur Sepolia"
+      },
+      {
+        "title": "Smart contracts avancés",
+        "items": [
+          "Contrats upgradeables (UUPS)",
+          "Oracles Chainlink",
+          "Fractionnement, distribution de revenus, marketplace",
+          "Audit interne"
+        ],
+        "deliverable": "Suite de contrats interconnectés avec tests de fuzzing"
+      },
+      {
+        "title": "Intégration frontend & blockchain",
+        "items": [
+          "Connexion wallet",
+          "Lecture et écriture on-chain",
+          "Gestion des transactions et des événements",
+          "Multi-chain, IPFS"
+        ],
+        "deliverable": "Frontend pleinement connecté aux contrats"
+      },
+      {
+        "title": "Sécurité, optimisation & production",
+        "items": [
+          "Top 10 des vulnérabilités Solidity",
+          "Optimisation du gas",
+          "Simulation d'attaques, bug bounty interne",
+          "Déploiement Polygon"
+        ],
+        "deliverable": "Rapport d'audit, contrats v2 et application publique"
+      }
+    ],
+    "registration": [
+      "Demande d'information via le formulaire ci-dessous.",
+      "Échange avec l'équipe pédagogique pour valider le parcours.",
+      "Frais de formation : 300 000 FCFA."
+    ],
+    "sessions": []
+  },
+  {
+    "slug": "initiation-blockchain",
+    "title": "Initiation à la Blockchain",
+    "domain": "fondamentaux",
+    "level": "debutant",
+    "audiences": [
+      "etudiants"
+    ],
+    "status": "confirme",
+    "featured": true,
+    "summary": "Quatre semaines pour comprendre la blockchain, découvrir les smart contracts et apprendre à concevoir un projet. Le programme prépare au hackathon inter-universitaire.",
+    "duration": "4 semaines · 2 h par semaine",
+    "durationBucket": "court",
+    "modalities": [
+      "hybride"
+    ],
+    "method": "Conférences interactives, ateliers pratiques guidés, études de cas et travail en mini-équipes.",
+    "objectives": [
+      "Comprendre les enjeux et les applications concrètes de la blockchain.",
+      "Découvrir les smart contracts et les applications décentralisées.",
+      "Identifier des cas d'usage dans des secteurs stratégiques.",
+      "Structurer une idée de projet en vue d'un hackathon."
+    ],
+    "audience": [
+      "Étudiants en BTS, licence, master ou cycle ingénieur.",
+      "Toutes filières : informatique, ingénierie, gestion, économie, droit, communication…"
+    ],
+    "prerequisites": [
+      "Aucun prérequis technique avancé.",
+      "Intérêt pour l'innovation, la technologie et l'entrepreneuriat."
+    ],
+    "skills": [
+      "Fondamentaux de la blockchain",
+      "Lecture critique de cas d'usage",
+      "Bases des smart contracts",
+      "Méthodologie de conception de projet",
+      "Travail en équipe pluridisciplinaire"
+    ],
+    "program": [
+      {
+        "title": "Fondamentaux de la blockchain"
+      },
+      {
+        "title": "Smart contracts et applications décentralisées"
+      },
+      {
+        "title": "Blockchain et secteurs stratégiques"
+      },
+      {
+        "title": "Méthodologie de conception de projet"
+      }
+    ],
+    "registration": [
+      "Appel à candidatures diffusé par votre établissement.",
+      "Inscription en ligne via un formulaire dédié.",
+      "Sélection sur la motivation, la disponibilité et l'équilibre des profils (technique, business, design)."
+    ],
+    "sessions": []
+  },
+  {
+    "slug": "smart-contracts-applications-decentralisees",
+    "title": "Smart contracts & applications décentralisées",
+    "shortTitle": "Smart contracts & dApps",
+    "domain": "developpement",
+    "level": "intermediaire",
+    "audiences": [
+      "developpeurs"
+    ],
+    "status": "en-preparation",
+    "summary": "Une spécialisation pour les développeurs qui veulent concevoir, tester et sécuriser des smart contracts, puis les intégrer dans une application.",
+    "durationBucket": "variable",
+    "modalities": [],
+    "objectives": [
+      "Écrire des contrats Solidity lisibles et testés.",
+      "Appliquer les standards de tokens et les bonnes pratiques de sécurité.",
+      "Intégrer des contrats dans une interface web."
+    ],
+    "audience": [
+      "Développeurs ayant une pratique de JavaScript ou d'un autre langage."
+    ],
+    "prerequisites": [
+      "Programmation de base.",
+      "Notions de blockchain."
+    ],
+    "skills": [
+      "Solidity",
+      "Tests et audit",
+      "Intégration frontend"
+    ],
+    "program": [],
+    "registration": [
+      "Inscrivez-vous pour être informé de l'ouverture."
+    ],
+    "sessions": []
+  },
+  {
+    "slug": "web3-product-management",
+    "title": "Web3 Product Management",
+    "domain": "produit-projet",
+    "level": "intermediaire",
+    "audiences": [
+      "professionnels"
+    ],
+    "status": "en-preparation",
+    "summary": "Concevoir des produits Web3 utiles : comprendre les utilisateurs, choisir quand la blockchain apporte réellement de la valeur, et piloter une feuille de route.",
+    "durationBucket": "variable",
+    "modalities": [],
+    "objectives": [
+      "Évaluer la pertinence de la blockchain pour un produit.",
+      "Définir une proposition de valeur et une feuille de route."
+    ],
+    "audience": [
+      "Product managers, entrepreneurs, chefs de produit en transition vers le Web3."
+    ],
+    "prerequisites": [],
+    "skills": [],
+    "program": [],
+    "registration": [
+      "Inscrivez-vous pour être informé de l'ouverture."
+    ],
+    "sessions": []
+  },
+  {
+    "slug": "web3-project-management",
+    "title": "Web3 Project Management",
+    "domain": "produit-projet",
+    "level": "intermediaire",
+    "audiences": [
+      "professionnels",
+      "organisations"
+    ],
+    "status": "en-preparation",
+    "summary": "Piloter un projet blockchain de la phase de cadrage au déploiement : parties prenantes, risques, gouvernance et suivi.",
+    "durationBucket": "variable",
+    "modalities": [],
+    "objectives": [
+      "Structurer et piloter un projet blockchain.",
+      "Anticiper les risques techniques et réglementaires."
+    ],
+    "audience": [
+      "Chefs de projet, responsables de programmes, consultants."
+    ],
+    "prerequisites": [],
+    "skills": [],
+    "program": [],
+    "registration": [
+      "Inscrivez-vous pour être informé de l'ouverture."
+    ],
+    "sessions": []
+  },
+  {
+    "slug": "web3-marketing",
+    "title": "Web3 Marketing",
+    "domain": "marketing-communaute",
+    "level": "debutant",
+    "audiences": [
+      "professionnels",
+      "etudiants"
+    ],
+    "status": "en-preparation",
+    "summary": "Communiquer sur un projet Web3 avec rigueur et responsabilité : positionnement, contenus, acquisition et mesure.",
+    "durationBucket": "variable",
+    "modalities": [],
+    "objectives": [
+      "Construire un positionnement clair pour un projet Web3.",
+      "Planifier et mesurer des actions de communication."
+    ],
+    "audience": [
+      "Professionnels du marketing et de la communication."
+    ],
+    "prerequisites": [],
+    "skills": [],
+    "program": [],
+    "registration": [
+      "Inscrivez-vous pour être informé de l'ouverture."
+    ],
+    "sessions": []
+  },
+  {
+    "slug": "community-management-web3",
+    "title": "Community Management & Community Building",
+    "shortTitle": "Community Management",
+    "domain": "marketing-communaute",
+    "level": "debutant",
+    "audiences": [
+      "professionnels",
+      "etudiants"
+    ],
+    "status": "en-preparation",
+    "summary": "Animer et faire grandir une communauté autour d'un projet : règles, rituels, modération, engagement et indicateurs.",
+    "durationBucket": "variable",
+    "modalities": [],
+    "objectives": [
+      "Concevoir une stratégie communautaire.",
+      "Animer et modérer une communauté en ligne et en présentiel."
+    ],
+    "audience": [
+      "Community managers, animateurs, responsables de communauté."
+    ],
+    "prerequisites": [],
+    "skills": [],
+    "program": [],
+    "registration": [
+      "Inscrivez-vous pour être informé de l'ouverture."
+    ],
+    "sessions": []
+  },
+  {
+    "slug": "formations-courtes-specialisations",
+    "title": "Formations courtes & spécialisations",
+    "shortTitle": "Formations courtes",
+    "domain": "fondamentaux",
+    "level": "intermediaire",
+    "audiences": [
+      "etudiants",
+      "developpeurs",
+      "professionnels"
+    ],
+    "status": "en-preparation",
+    "summary": "Des modules ciblés pour approfondir un sujet précis en quelques séances.",
+    "durationBucket": "court",
+    "modalities": [],
+    "objectives": [
+      "Approfondir une compétence ciblée en peu de temps."
+    ],
+    "audience": [
+      "Apprenants ayant déjà suivi une initiation ou disposant d'une expérience équivalente."
+    ],
+    "prerequisites": [],
+    "skills": [],
+    "program": [],
+    "registration": [
+      "Inscrivez-vous pour être informé de l'ouverture."
+    ],
+    "sessions": []
+  },
+  {
+    "slug": "formations-sur-mesure",
+    "title": "Formations sur mesure",
+    "domain": "sur-mesure",
+    "level": "debutant",
+    "audiences": [
+      "organisations"
+    ],
+    "status": "sur-demande",
+    "summary": "Un programme construit avec votre organisation : objectifs, public, durée et format définis ensemble, du module de sensibilisation au bootcamp.",
+    "durationBucket": "variable",
+    "modalities": [
+      "presentiel",
+      "en-ligne",
+      "hybride"
+    ],
+    "objectives": [
+      "Répondre à un besoin précis de votre organisation.",
+      "Adapter le niveau au public : dirigeants, équipes métiers ou techniques."
+    ],
+    "audience": [
+      "Entreprises, administrations, ONG, universités et écoles."
+    ],
+    "prerequisites": [
+      "Aucun : le niveau est défini lors du cadrage."
+    ],
+    "skills": [
+      "Définies avec vous lors du cadrage."
+    ],
+    "program": [
+      {
+        "title": "Cadrage du besoin et du public"
+      },
+      {
+        "title": "Proposition pédagogique et calendrier"
+      },
+      {
+        "title": "Animation des sessions"
+      },
+      {
+        "title": "Évaluation et bilan"
+      }
+    ],
+    "registration": [
+      "Décrivez votre besoin via le formulaire « Parlons de votre projet »."
+    ],
+    "sessions": []
+  }
+]

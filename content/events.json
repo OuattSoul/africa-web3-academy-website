@@ -1,0 +1,59 @@
+[
+  {
+    "slug": "hackathon-inter-universitaire-2026",
+    "title": "Programme d'initiation & Hackathon inter-universitaire — Édition 2026",
+    "type": "hackathon",
+    "role": "organisateur",
+    "dateLabel": "Édition 2026 — calendrier communiqué aux établissements",
+    "country": "Côte d'Ivoire",
+    "themes": [
+      "Inclusion financière",
+      "Traçabilité",
+      "Éducation",
+      "Gouvernance"
+    ],
+    "summary": "Quatre semaines d'initiation à la blockchain, puis 24 à 48 heures pour concevoir en équipe une solution répondant à une problématique locale.",
+    "description": [
+      "Le programme réunit des étudiants de plusieurs établissements d'enseignement supérieur. Il se déroule en deux phases : une initiation hybride de quatre semaines, puis un hackathon inter-universitaire.",
+      "Les équipes de 3 à 5 étudiants, pluridisciplinaires, travaillent sur des thématiques comme l'inclusion financière et les paiements numériques, la traçabilité des produits agricoles, la certification académique sécurisée, la transparence et la gouvernance, ou les solutions blockchain pour les PME.",
+      "Les projets sont présentés devant un jury académique et professionnel. Les participants reçoivent une attestation de participation ; les équipes finalistes, un certificat de réussite."
+    ],
+    "organizers": [
+      "Africa Web3 Academy"
+    ],
+    "partners": [],
+    "media": [],
+    "pending": "Dates, lieu et établissements participants à publier après confirmation.",
+    "relatedResources": [
+      "reglement-hackathon-inter-universitaire",
+      "criteres-evaluation-hackathon",
+      "modalites-participation-etudiants"
+    ]
+  },
+  {
+    "slug": "technologies-3-0-sante-agriculture-2025",
+    "title": "Les technologies 3.0 au service de la Santé et de l'Agriculture",
+    "type": "conference",
+    "role": "organisateur",
+    "start": "2025-11-05",
+    "end": "2025-11-13",
+    "city": "Abidjan",
+    "country": "Côte d'Ivoire",
+    "themes": [
+      "AgriTech",
+      "Santé",
+      "Finance"
+    ],
+    "summary": "Un panel de discussions sur l'intégration de la blockchain dans l'AgriTech, la santé et la finance, avec des professionnels de la médecine, des TIC et de la cybersécurité.",
+    "description": [
+      "L'événement visait à renforcer les capacités des participants, élaborer une stratégie et partager des retours d'expérience sur l'intégration des nouvelles technologies dans l'agriculture.",
+      "Les échanges portaient sur l'impact de la blockchain, du Web3 et de l'intelligence artificielle dans l'agriculture, la santé et la finance."
+    ],
+    "organizers": [
+      "Africa Web3 Academy"
+    ],
+    "partners": [],
+    "media": [],
+    "pending": "Intervenants confirmés, compte rendu, photos et vidéos à ajouter."
+  }
+]

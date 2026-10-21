@@ -1,0 +1,15 @@
+.bar { display: grid; gap: var(--s-4); padding: var(--s-5); margin-bottom: var(--s-6); background: var(--surface-alt); border-radius: var(--r-lg); }
+.filters { display: grid; gap: var(--s-3); grid-template-columns: repeat(auto-fit, minmax(10.5rem, 1fr)); }
+.filter { display: grid; gap: 4px; }
+.filter label { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted); }
+.filter select {
+  appearance: none; min-height: 46px; padding: 0.5rem 2.25rem 0.5rem 0.8rem; font-size: 1rem; font-weight: 600;
+  background: var(--white) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 24 24' fill='none' stroke='%2303024c' stroke-width='2' stroke-linecap='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E") no-repeat right 0.7rem center;
+  border: 1.5px solid var(--border-input); border-radius: var(--r-md); cursor: pointer;
+  transition: border-color var(--dur-1), background-color var(--dur-1);
+}
+.filter select:hover { border-color: var(--brand-navy); }
+.filter select[data-set] { border-color: var(--brand-navy); background-color: var(--navy-100); }
+.status { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: var(--s-3); font-size: var(--fs-small); color: var(--text-muted); }
+.status b { color: var(--text); }
+.reset { min-height: 44px; font-weight: 700; color: var(--blue-600); text-decoration: underline; text-underline-offset: 0.2em; }
