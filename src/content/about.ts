@@ -1,9 +1,12 @@
 import type { TeamMember } from "./types";
+import { live } from "./archive";
+import team from "../../content/team.json";
 
-export const TEAM: TeamMember[] = [
-  { name: "Souleymane Ouattara", role: "Fondateur" },
-  // Add trainers and mentors here once they agree to be listed.
-];
+// Edited from the admin (« Gestion de l'équipe »). List members only once they agree to be listed.
+// Only published members reach the page; drafts and hidden/archived entries stay in the file.
+export const TEAM = live(team as TeamMember[])
+  .filter((m) => m.status === "publie")
+  .map(({ id, name, role, photo, linkedin, bio }) => ({ id, name, role, photo, linkedin, bio }));
 
 // source: « Structures organisationnelles » — current (first-year) structure
 export const POLES = [

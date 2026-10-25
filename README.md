@@ -34,7 +34,7 @@ docs/DESIGN.md         direction artistique et contrastes vérifiés
 
 **Le plus simple : l'application d'administration** ([../admin](../admin/README.md)), qui édite les fichiers ci-dessous avec validation.
 
-Les données éditables sont dans `content/*.json` (`trainings`, `events`, `partners`, `resources`, `faq`, `community`, `seo`). Les modules `src/content/*.ts` les typent et y ajoutent la logique ; les libellés, solutions, équipe et navigation restent dans ces fichiers TypeScript :
+Les données éditables sont dans `content/*.json` (`trainings`, `events`, `partners`, `resources`, `faq`, `community`, `team`, `seo`). Les modules `src/content/*.ts` les typent et y ajoutent la logique ; les libellés, solutions, pôles et navigation restent dans ces fichiers TypeScript :
 
 | Fichier | Contenu |
 |---|---|
@@ -44,7 +44,7 @@ Les données éditables sont dans `content/*.json` (`trainings`, `events`, `part
 | `resources.ts` | Articles, guides, publications, ainsi que la FAQ. |
 | `solutions.ts` | Segments (entreprises, institutions…) et offres, selon la structure problème → besoin → solution → déroulement → livrables → modalités. |
 | `community.ts` | **Canaux communautaires** et règles de conduite. |
-| `about.ts` | Équipe et pôles. |
+| `about.ts` | Pôles, et lecture de l'équipe (`content/team.json`, section « Notre équipe » de `/a-propos#equipe`). Seuls les membres `status: "publie"` sont affichés ; `masque` et `archive` restent dans le fichier ; le champ `draft` (brouillon de l'admin) n'est jamais lu par le site. |
 | `site.ts` | Coordonnées, réseaux sociaux, libellés. |
 | `navigation.ts` | Menus et pied de page. |
 

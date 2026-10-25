@@ -1,4 +1,5 @@
 import type { CommunityChannel } from "./types";
+import { live } from "./archive";
 import channels from "../../content/community.json";
 
 // OFFICIAL COMMUNITY CHANNELS — single place to configure.
@@ -6,7 +7,7 @@ import channels from "../../content/community.json";
 //   { id: "whatsapp", label: "Groupe WhatsApp", description: "Annonces et échanges", url: "https://chat.whatsapp.com/…", primary: true },
 // While this list is empty, the site shows an explicit « canaux en cours d'ouverture » state
 // and the main button leads to the sign-up form.
-export const COMMUNITY_CHANNELS = channels as CommunityChannel[];
+export const COMMUNITY_CHANNELS = live(channels as CommunityChannel[]);
 
 export const primaryChannel = () => COMMUNITY_CHANNELS.find((c) => c.primary) ?? COMMUNITY_CHANNELS[0];
 

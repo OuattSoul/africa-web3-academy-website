@@ -182,6 +182,7 @@ export const FOOTER_LINKS: NavGroup[] = [
     title: "Académie",
     links: [
       { label: "À propos", href: "/a-propos" },
+      { label: "Notre équipe", href: "/a-propos#equipe" },
       { label: "Ressources", href: "/ressources" },
       { label: "Contact", href: "/contact" },
     ],

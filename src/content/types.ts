@@ -138,8 +138,18 @@ export interface CommunityChannel {
   primary?: boolean;
 }
 
+/** publie = visible sur le site ; masque = conservé mais non affiché ; archive = ancien membre */
+export type TeamStatus = "publie" | "masque" | "archive";
+
 export interface TeamMember {
+  id: string;
   name: string;
   role: string;
+  status: TeamStatus;
+  photo?: string;
+  linkedin?: string;
+  /** shown in the card popup; paragraphs separated by a blank line */
   bio?: string;
+  /** unpublished edits saved from the admin — never rendered */
+  draft?: unknown;
 }

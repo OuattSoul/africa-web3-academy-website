@@ -1,0 +1,53 @@
+.grid { --popup-w: 22rem; display: grid; gap: var(--s-5); grid-template-columns: repeat(auto-fill, minmax(min(100%, 15rem), 1fr)); }
+
+.card {
+  position: relative; display: grid; align-content: start;
+  background: var(--white); border: 1px solid var(--border); border-radius: var(--r-lg);
+  transition: box-shadow var(--dur-2) var(--ease-out), border-color var(--dur-2) var(--ease-out), transform var(--dur-2) var(--ease-out);
+}
+.card[data-open] { z-index: 5; border-color: var(--navy-300); box-shadow: var(--shadow-2); }
+@media (hover: hover) { .card:hover { border-color: var(--navy-300); transform: translateY(-2px); } }
+
+.trigger { display: grid; gap: var(--s-1); width: 100%; padding: var(--s-4) var(--s-4) var(--s-3); text-align: left; border-radius: var(--r-lg); }
+button.trigger { cursor: pointer; }
+
+.photo {
+  position: relative; display: grid; place-items: center; aspect-ratio: 4 / 5; margin-bottom: var(--s-3); overflow: hidden;
+  border-radius: var(--r-md); background: linear-gradient(160deg, var(--navy-100), var(--navy-200));
+  font-family: var(--font-display); font-size: 3rem; color: var(--brand-navy);
+}
+.photo img { object-fit: cover; }
+
+.name { font-family: var(--font-display); font-size: 1.375rem; line-height: var(--lh-heading); color: var(--text); }
+.role { font-size: var(--fs-small); color: var(--text-muted); }
+.more { display: inline-flex; align-items: center; gap: var(--s-1); margin-top: var(--s-2); font-size: var(--fs-small); font-weight: 700; color: var(--link); }
+.more svg { transform: rotate(-90deg); transition: transform var(--dur-2) var(--ease-out); }
+.card[data-open] .more svg { transform: rotate(-90deg) translateY(3px); }
+.card[data-open][data-side="below"] .more svg { transform: none; }
+
+.linkedin {
+  display: inline-flex; align-items: center; gap: var(--s-2); justify-self: start; min-height: 44px;
+  margin: 0 var(--s-4) var(--s-3); font-size: var(--fs-small); font-weight: 700; color: var(--brand-navy);
+}
+.linkedin:hover { color: var(--brand-blue); text-decoration: underline; text-underline-offset: 0.2em; }
+
+/* Popup: the transparent padding bridges the gap so the pointer can travel from card to panel. */
+.popup {
+  position: absolute; top: 0; width: calc(var(--popup-w) + var(--s-4));
+  visibility: hidden; opacity: 0; transform: translateX(var(--shift, 0));
+  transition: opacity var(--dur-2) var(--ease-out), transform var(--dur-2) var(--ease-out), visibility 0s linear var(--dur-2);
+}
+[data-side="right"] > .popup { left: 100%; padding-left: var(--s-4); --shift: -8px; }
+[data-side="left"] > .popup { right: 100%; padding-right: var(--s-4); --shift: 8px; }
+[data-side="below"] > .popup { top: calc(100% - var(--s-2)); left: 0; right: 0; width: auto; padding-top: var(--s-3); transform: translateY(-8px); }
+.card[data-open] > .popup { visibility: visible; opacity: 1; transform: none; transition-delay: 0s; }
+
+.panel {
+  display: grid; gap: var(--s-3); max-height: min(70vh, 32rem); overflow-y: auto;
+  padding: var(--s-5); background: var(--white); color: var(--text);
+  border: 1px solid var(--border); border-radius: var(--r-lg); box-shadow: var(--shadow-2);
+  font-size: var(--fs-body); line-height: var(--lh-body);
+}
+.panelHead { display: flex; justify-content: space-between; align-items: start; gap: var(--s-3); padding-bottom: var(--s-3); border-bottom: 1px solid var(--border); }
+.close { display: grid; place-items: center; flex: none; width: 44px; height: 44px; margin: -10px -10px 0 0; border-radius: var(--r-md); color: var(--text-muted); }
+.close:hover { background: var(--navy-50); color: var(--text); }

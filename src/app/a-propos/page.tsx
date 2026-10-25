@@ -2,6 +2,7 @@ import Link from "next/link";
 import { pageMeta } from "@/content/seo";
 import { PageHero } from "@/components/PageHero";
 import { Icon } from "@/components/Icon";
+import { TeamGrid } from "@/components/TeamGrid";
 import { POLES, TEAM } from "@/content/about";
 import { SITE } from "@/content/site";
 import styles from "../pages.module.css";
@@ -68,13 +69,18 @@ export default function AboutPage() {
         <div className="container">
           <p className="eyebrow">Équipe & formateurs</p>
           <h2 id="team-title" style={{ marginBlock: "var(--s-3) var(--s-7)", color: "var(--white)" }}>Une organisation en pôles.</h2>
-          <ul role="list" className={styles.tiles} style={{ marginBottom: "var(--s-7)" }}>
+          <ul role="list" className={styles.tiles}>
             {POLES.map((p) => <li key={p.title} className={styles.tile}><h3 style={{ color: "var(--white)" }}>{p.title}</h3><p className="small" style={{ color: "var(--text-on-dark-muted)" }}>{p.text}</p></li>)}
           </ul>
-          <ul role="list" style={{ display: "flex", flexWrap: "wrap", gap: "var(--s-6)" }}>
-            {TEAM.map((m) => <li key={m.name}><p style={{ fontFamily: "var(--font-display)", fontSize: "1.5rem" }}>{m.name}</p><p className="small" style={{ color: "var(--text-on-dark-muted)" }}>{m.role}</p></li>)}
-          </ul>
-          <p className="small" style={{ marginTop: "var(--s-6)", color: "var(--text-on-dark-muted)" }}>Les formateurs et mentors seront présentés ici avec leur accord.</p>
+        </div>
+      </section>
+
+      <section className="section section--alt" id="equipe" aria-labelledby="people-title">
+        <div className="container">
+          <p className="eyebrow">Notre équipe</p>
+          <h2 id="people-title" style={{ marginBlock: "var(--s-3) var(--s-7)", maxWidth: "22ch" }}>Les personnes qui font vivre l&apos;académie.</h2>
+          {TEAM.length ? <TeamGrid members={TEAM} /> : <p className="muted">L&apos;équipe sera présentée ici prochainement.</p>}
+          <p className="small muted" style={{ marginTop: "var(--s-6)" }}>Les formateurs et mentors sont présentés ici avec leur accord.</p>
         </div>
       </section>
 

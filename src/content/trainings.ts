@@ -1,4 +1,5 @@
 import type { Training } from "./types";
+import { live } from "./archive";
 import trainings from "../../content/trainings.json";
 
 // Status rules:
@@ -7,7 +8,7 @@ import trainings from "../../content/trainings.json";
 //  - "sur-demande": built with the client, routes to the project form.
 // Sessions: add only dates confirmed by the academy.
 
-export const TRAININGS = trainings as Training[];
+export const TRAININGS = live(trainings as Training[]);
 
 export const getTraining = (slug: string) => TRAININGS.find((t) => t.slug === slug);
 

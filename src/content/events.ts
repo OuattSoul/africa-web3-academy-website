@@ -1,11 +1,12 @@
 import type { AcademyEvent } from "./types";
+import { live } from "./archive";
 import events from "../../content/events.json";
 
 // Role must reflect what can be proven: "organisateur" only for events the academy organised.
 // Partners: list only those who authorised being displayed.
 // Media: put files in /public/media/events/<slug>/ and reference them here.
 
-export const EVENTS = events as AcademyEvent[];
+export const EVENTS = live(events as AcademyEvent[]);
 
 export const getEvent = (slug: string) => EVENTS.find((e) => e.slug === slug);
 

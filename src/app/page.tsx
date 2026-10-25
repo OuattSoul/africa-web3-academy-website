@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { pageMeta } from "@/content/seo";
 import { Icon } from "@/components/Icon";
@@ -252,7 +253,12 @@ export default function Home() {
             <h2 id="partners-title">Construire avec d&apos;autres.</h2>
           </div>
           {PARTNERS.length ? (
-            <ul role="list" className={styles.partnerList}>{PARTNERS.map((p) => <li key={p.name}>{p.name}</li>)}</ul>
+            <ul role="list" className={styles.partnerList}>{PARTNERS.map((p) => (
+              <li key={p.name}>
+                {p.logo && p.logoAuthorized && <Image src={p.logo} alt="" width={160} height={80} style={{ objectFit: "contain" }} />}
+                {p.name}
+              </li>
+            ))}</ul>
           ) : (
             <div className={styles.partnersEmpty}>
               <p>Nous présenterons ici les partenaires dont la collaboration est confirmée. Établissements, communautés, médias, entreprises technologiques : {PARTNER_CATEGORIES.length} façons de collaborer.</p>

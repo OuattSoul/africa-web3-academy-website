@@ -166,6 +166,7 @@
 .partnersEmpty { display: grid; gap: var(--s-4); color: var(--text-muted); max-width: 40rem; }
 .partnerActions { display: flex; flex-wrap: wrap; gap: var(--s-5); align-items: center; }
 .partnerList { display: flex; flex-wrap: wrap; gap: var(--s-5); font-weight: 700; }
+.partnerList li { display: flex; flex-direction: column; align-items: center; gap: var(--s-2); text-align: center; }
 @media (min-width: 900px) { .partnersGrid { grid-template-columns: 1fr 1.6fr; } }
 
 /* ——— 9. Community: the learners' blue ——— */
