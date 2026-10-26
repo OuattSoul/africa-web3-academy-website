@@ -153,3 +153,43 @@ export interface TeamMember {
   /** unpublished edits saved from the admin — never rendered */
   draft?: unknown;
 }
+
+/** participant = organisation membre active ; en-preparation = adhésion en cours */
+export type CampusStatus = "participant" | "en-preparation";
+
+export interface CampusCountry {
+  /** ISO 3166-1 alpha-2, also names the flag in public/flags/ */
+  code: string;
+  /** ISO 3166-1 numeric, matches the map shapes (src/content/geo/africa.ts) */
+  iso: string;
+  name: string;
+  /** used on the map when the full name is long */
+  shortName?: string;
+  /** representative point of the country, in degrees */
+  marker: { lat: number; lon: number };
+  /** side of the marker where the map label sits */
+  label?: "top" | "right" | "bottom" | "left";
+  status: CampusStatus;
+  /** total participants in the country, shown on the map */
+  participants: number;
+  /** member organisations, campuses or institutions — only once confirmed */
+  campuses: { name: string; city?: string; url?: string }[];
+  activities: string[];
+}
+
+export interface CampusEdition {
+  slug?: string;
+  title: string;
+  dateLabel: string;
+  countries: string[];
+  summary?: string;
+}
+
+export interface CampusProgram {
+  name: string;
+  summary: string;
+  vision: string[];
+  objectives: { title: string; text: string }[];
+  countries: CampusCountry[];
+  editions: CampusEdition[];
+}

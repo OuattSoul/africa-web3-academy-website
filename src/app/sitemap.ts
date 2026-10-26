@@ -7,7 +7,7 @@ import { RESOURCES } from "@/content/resources";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const paths = [
-    "", "/formations", "/organisations", "/projet", "/evenements", "/partenaires", "/partenaires/devenir-partenaire",
+    "", "/formations", "/organisations", "/projet", "/evenements", "/campus-builder", "/partenaires", "/partenaires/devenir-partenaire",
     "/ressources", "/ressources/faq", "/a-propos", "/contact", "/communaute", "/confidentialite", "/mentions-legales",
     ...TRAININGS.map((t) => `/formations/${t.slug}`),
     ...SOLUTIONS.map((s) => `/organisations/${s.slug}`),

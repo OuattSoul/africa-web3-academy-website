@@ -51,4 +51,6 @@ Tous dans `src/app/globals.css` (`:root`) : couleurs de marque et sémantiques, 
 
 ## 5. Mouvement
 
+Carte Campus Builder (`/campus-builder`) : un vert « live » (`--live`, `#2EE59D`) est la seule teinte hors palette bleue, réservé aux nœuds actifs du réseau. Pulsation de trois anneaux concentriques toutes les 3,6 s, décalée par pays ; animations suspendues hors écran et remplacées par un halo fixe sous `prefers-reduced-motion`.
+
 Révélations au défilement (IntersectionObserver, 480 ms, translation de 18 px), entrée du hero, transitions des menus et des filtres, pulsation discrète de quelques nœuds du motif. Tout est désactivé sous `prefers-reduced-motion`. Le contenu reste visible sans JavaScript.

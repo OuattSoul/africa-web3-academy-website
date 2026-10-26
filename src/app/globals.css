@@ -38,6 +38,9 @@
   --success: #1e6b3a;
   --success-bg: #e8f3ec;
   --focus: var(--brand-blue);
+  /* "Live" signal — the only non-blue hue, reserved for active network nodes (Campus Builder map) */
+  --live-rgb: 46 229 157;
+  --live: rgb(var(--live-rgb));
 
   /* Typography */
   --font-display: var(--font-serif), Georgia, "Times New Roman", serif;

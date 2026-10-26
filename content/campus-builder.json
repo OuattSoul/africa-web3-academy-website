@@ -1,0 +1,25 @@
+{
+  "name": "Blockchain Campus Builder Afrique",
+  "summary": "Un programme qui réunit des organisations de huit pays d'Afrique francophone pour apporter aux étudiants de leurs communautés la connaissance et le savoir-faire pratique du développement de projets blockchain.",
+  "vision": [
+    "Faire émerger sur la scène de l'Afrique francophone des talents et des compétences employables, au même titre que des projets capables de répondre aux défis vécus localement.",
+    "Chaque organisation membre porte le programme auprès des étudiants de sa communauté ; le réseau mutualise contenus, mentors et retours d'expérience d'un pays à l'autre."
+  ],
+  "objectives": [
+    { "title": "Transmettre", "text": "Apporter aux étudiants la connaissance des technologies blockchain, des fondamentaux jusqu'au développement." },
+    { "title": "Pratiquer", "text": "Construire des projets concrets, encadrés par des mentors, plutôt que d'accumuler de la théorie." },
+    { "title": "Rendre employable", "text": "Développer des compétences reconnues et recherchées par les acteurs de l'écosystème." },
+    { "title": "Résoudre", "text": "Faire naître des projets qui répondent à des problématiques réelles des communautés." }
+  ],
+  "countries": [
+    { "code": "SN", "iso": "686", "name": "Sénégal", "marker": { "lat": 14.6, "lon": -15.0 }, "label": "left", "status": "participant", "participants": 0, "campuses": [], "activities": [] },
+    { "code": "ML", "iso": "466", "name": "Mali", "marker": { "lat": 16.8, "lon": -3.6 }, "label": "top", "status": "participant", "participants": 0, "campuses": [], "activities": [] },
+    { "code": "BF", "iso": "854", "name": "Burkina Faso", "marker": { "lat": 12.3, "lon": -1.6 }, "label": "right", "status": "participant", "participants": 0, "campuses": [], "activities": [] },
+    { "code": "CI", "iso": "384", "name": "Côte d'Ivoire", "marker": { "lat": 7.6, "lon": -5.5 }, "label": "bottom", "status": "participant", "participants": 10, "campuses": [], "activities": [] },
+    { "code": "TG", "iso": "768", "name": "Togo", "marker": { "lat": 8.1, "lon": 0.95 }, "label": "bottom", "status": "participant", "participants": 23, "campuses": [], "activities": [] },
+    { "code": "BJ", "iso": "204", "name": "Bénin", "marker": { "lat": 9.9, "lon": 2.45 }, "label": "right", "status": "participant", "participants": 2, "campuses": [], "activities": [] },
+    { "code": "GA", "iso": "266", "name": "Gabon", "marker": { "lat": -0.8, "lon": 11.6 }, "label": "left", "status": "participant", "participants": 0, "campuses": [], "activities": [] },
+    { "code": "CD", "iso": "180", "name": "République démocratique du Congo", "shortName": "RD Congo", "marker": { "lat": -2.9, "lon": 23.6 }, "label": "right", "status": "participant", "participants": 0, "campuses": [], "activities": [] }
+  ],
+  "editions": []
+}

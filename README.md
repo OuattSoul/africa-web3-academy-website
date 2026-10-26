@@ -40,6 +40,7 @@ Les données éditables sont dans `content/*.json` (`trainings`, `events`, `part
 |---|---|
 | `trainings.ts` | Formations et sessions. `status` : `confirme`, `en-preparation` (affiché « contenu provisoire »), `sur-demande`. Ajoutez une session dans `sessions: [{ start: "2027-01-15", modality: "hybride", city: "Abidjan" }]` : elle apparaît dans la fiche et dans le mega-menu. |
 | `events.ts` | Événements. `role` doit refléter la réalité (`organisateur`, `intervenant`, `participant`…). Photos : `public/media/events/<slug>/`, à déclarer dans `media`. `pending` affiche un avertissement « fiche en cours de complétion ». |
+| `campusBuilder.ts` | Programme Campus Builder (`content/campus-builder.json`, page `/campus-builder`) : pays (`marker` en degrés lat/lon, `label` = côté de l'étiquette, `participants` = nombre total affiché sur la carte, `campuses` et `activities` uniquement une fois confirmés) et `editions`. Drapeaux : `public/flags/<code>.svg`. Les contours de l'Afrique (`geo/africa.ts`) sont générés par `scripts/gen-africa-map.mjs` (Natural Earth 1:50m). |
 | `partners.ts` | Partenaires **confirmés uniquement**. Le logo ne s'affiche que si `logoAuthorized: true`. |
 | `resources.ts` | Articles, guides, publications, ainsi que la FAQ. |
 | `solutions.ts` | Segments (entreprises, institutions…) et offres, selon la structure problème → besoin → solution → déroulement → livrables → modalités. |

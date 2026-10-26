@@ -1,0 +1,96 @@
+/* Campus Builder network map — sits on a dark section */
+.explorer { display: grid; gap: var(--s-6); align-items: start; }
+@media (min-width: 1100px) { .explorer { grid-template-columns: minmax(0, 1fr) 19rem; gap: var(--s-7); } }
+
+.mapCol { display: grid; gap: var(--s-3); }
+.map {
+  position: relative; container-type: inline-size;
+  width: 100%; max-width: min(100%, calc((100svh - var(--header-h) - 5rem) * 1.045)); margin-inline: auto;
+  border-radius: var(--r-lg); background: radial-gradient(120% 90% at 40% 45%, rgb(48 105 194 / 0.16), transparent 70%), rgb(255 255 255 / 0.02);
+  border: 1px solid var(--border-on-dark);
+}
+.svg { width: 100%; height: auto; aspect-ratio: 1000 / 957; overflow: hidden; border-radius: inherit; cursor: grab; user-select: none; -webkit-user-select: none; -webkit-tap-highlight-color: transparent; }
+.svg:active { cursor: grabbing; }
+
+/* Layer 1 — countries */
+.country, .member { vector-effect: non-scaling-stroke; stroke-linejoin: round; }
+.country { fill: rgb(255 255 255 / 0.05); stroke: rgb(175 195 236 / 0.34); stroke-width: 0.75; }
+.member { fill: rgb(var(--live-rgb) / 0.14); stroke: rgb(var(--live-rgb) / 0.75); stroke-width: 1; cursor: pointer; transition: fill var(--dur-2) var(--ease-out); }
+.member:hover, .member[data-active] { fill: rgb(var(--live-rgb) / 0.28); }
+
+/* Layer 2 — markers (screen px) */
+.marker { cursor: pointer; outline: none; }
+.hit { fill: transparent; }
+.dot { fill: var(--live); stroke: var(--brand-ink); stroke-width: 1.5; }
+.ring { fill: rgb(var(--live-rgb) / 0.1); stroke: var(--live); stroke-width: 1.25; opacity: 0; transform-box: fill-box; transform-origin: center; pointer-events: none; }
+.marker[data-active] .dot { stroke: var(--white); stroke-width: 2; }
+.marker:focus-visible .hit { fill: none; stroke: var(--navy-300); stroke-width: 2; stroke-dasharray: 3 3; }
+.marker[data-status="en-preparation"] .dot { fill: var(--brand-ink); stroke: var(--live); stroke-dasharray: 2 2; }
+.label {
+  font: 700 12px/1 var(--font-sans); fill: var(--white); letter-spacing: 0.01em; pointer-events: none;
+  paint-order: stroke; stroke: rgb(3 2 76 / 0.85); stroke-width: 3.5px; stroke-linejoin: round;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .marker[data-status="participant"] .ring { animation: beat 3.6s var(--ease-out) infinite; animation-delay: calc(var(--delay) + var(--i) * 0.38s); }
+  .marker[data-status="participant"] .dot { transform-box: fill-box; transform-origin: center; animation: dot 3.6s var(--ease-out) infinite; animation-delay: var(--delay); }
+  .map[data-paused] .ring, .map[data-paused] .dot { animation-play-state: paused; }
+}
+@media (prefers-reduced-motion: reduce) {
+  /* a still halo instead of the pulse */
+  .marker[data-status="participant"] .halo { opacity: 0.35; transform: scale(2); }
+}
+@keyframes beat {
+  0% { opacity: 0.7; transform: scale(1); }
+  60%, 100% { opacity: 0; transform: scale(4.2); }
+}
+@keyframes dot {
+  0%, 30%, 100% { transform: scale(1); }
+  10% { transform: scale(1.18); }
+}
+
+/* Zoom controls */
+.controls { position: absolute; top: var(--s-3); right: var(--s-3); display: grid; gap: var(--s-1); }
+.controls button {
+  display: grid; place-items: center; width: 44px; height: 44px; border-radius: var(--r-md);
+  background: rgb(3 2 76 / 0.72); border: 1px solid var(--border-on-dark); color: var(--white);
+  font-size: 1.35rem; font-weight: 600; line-height: 1; backdrop-filter: blur(6px);
+  transition: background-color var(--dur-1), opacity var(--dur-1);
+}
+.controls button:hover:not(:disabled) { background: var(--brand-navy); }
+.controls button:disabled { opacity: 0.4; cursor: default; }
+.controls .reset { font-size: 1.1rem; }
+
+/* Country bubble: floats at the marker, flips above it in the lower half of the map */
+.cardSlot { position: absolute; z-index: 2; pointer-events: none; }
+.cardSlot[data-place="above"] { transform: translate(-50%, calc(-100% - 16px)); }
+.cardSlot[data-place="below"] { transform: translate(-50%, 18px); }
+.cardSlot:not([style]) { display: none; }
+.card {
+  display: grid; justify-items: center; gap: 2px; padding: var(--s-2) var(--s-3); border-radius: var(--r-md);
+  background: var(--white); color: var(--text); box-shadow: var(--shadow-2); font-size: var(--fs-small); line-height: 1.3; white-space: nowrap;
+}
+.total { font-family: var(--font-display); font-weight: 500; font-size: 1.25rem; }
+@media (prefers-reduced-motion: no-preference) { .card { animation: cardIn var(--dur-2) var(--ease-out); } }
+@keyframes cardIn { from { opacity: 0; translate: 0 4px; } }
+
+.help { color: var(--text-on-dark-muted); font-size: 0.8125rem; text-align: center; }
+.help kbd { font: inherit; font-weight: 700; padding: 0 0.3em; border: 1px solid var(--border-on-dark); border-radius: var(--r-sm); }
+
+/* Side panel */
+.aside { display: grid; gap: var(--s-5); }
+.legend { display: flex; flex-wrap: wrap; gap: var(--s-3) var(--s-5); font-size: var(--fs-small); color: var(--text-on-dark-muted); }
+.legend li { display: inline-flex; align-items: center; gap: var(--s-2); }
+.legendDot { width: 10px; height: 10px; border-radius: 50%; background: var(--live); box-shadow: 0 0 0 4px rgb(var(--live-rgb) / 0.18); flex: none; }
+.flag { width: 24px; height: 16px; object-fit: cover; border-radius: 2px; box-shadow: 0 0 0 1px rgb(255 255 255 / 0.2); flex: none; }
+.count { font-size: var(--fs-small); color: var(--text-on-dark-muted); }
+.count b { color: var(--white); font-size: 1.25rem; font-family: var(--font-display); font-weight: 500; }
+.list { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 13rem), 1fr)); border-top: 1px solid var(--border-on-dark); }
+@media (min-width: 1100px) { .list { grid-template-columns: 1fr; } }
+.list button {
+  display: flex; align-items: center; gap: var(--s-3); width: 100%; min-height: 48px; padding: var(--s-2) var(--s-2);
+  border-bottom: 1px solid var(--border-on-dark); text-align: left; font-weight: 600; color: var(--white);
+  transition: background-color var(--dur-1), padding var(--dur-2) var(--ease-out);
+}
+.list button:hover, .list button[data-active] { background: rgb(255 255 255 / 0.06); padding-left: var(--s-3); }
+.list button[aria-pressed="true"] { background: rgb(var(--live-rgb) / 0.14); }

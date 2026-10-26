@@ -1,0 +1,21 @@
+/* Campus Builder page */
+.figures { display: grid; grid-template-columns: repeat(2, 1fr); border-top: 1px solid var(--border-on-dark); }
+.figures > div { padding: var(--s-4) var(--s-3) 0 0; }
+.figures dt { font-size: var(--fs-eyebrow); font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent-on-dark); }
+.figures dd { font-family: var(--font-display); font-size: clamp(2.5rem, 1.8rem + 2.6vw, 4rem); line-height: 1; color: var(--white); margin-top: var(--s-2); }
+
+.mapHead { display: grid; gap: var(--s-3); max-width: 46rem; margin-bottom: var(--s-7); }
+.mapHead h2 { color: var(--white); }
+
+.vision { display: grid; gap: var(--s-5); font-size: var(--fs-lead); }
+.vision ul { margin-top: var(--s-4); font-size: var(--fs-body); }
+
+.countryHead { display: flex; flex-wrap: wrap; align-items: center; gap: var(--s-2) var(--s-3); align-self: start; }
+.facts { display: grid; gap: var(--s-4); }
+.facts dt { font-size: var(--fs-small); font-weight: 700; }
+.facts dd ul { display: grid; gap: var(--s-1); }
+
+.join { display: grid; gap: var(--s-6); align-items: end; }
+.join h2 { margin-top: var(--s-3); max-width: 24ch; }
+.joinActions { display: flex; flex-wrap: wrap; gap: var(--s-3); }
+@media (min-width: 950px) { .join { grid-template-columns: 1.5fr 1fr; } .joinActions { justify-content: flex-end; } }

@@ -97,6 +97,12 @@ export const NAV: NavItem[] = [
           ],
         },
         {
+          title: "Programmes",
+          links: [
+            { label: "Campus Builder Afrique", href: "/campus-builder", description: "Le réseau de 8 pays et sa carte" },
+          ],
+        },
+        {
           title: "Formats",
           links: [
             { label: "Conférences & interventions", href: "/evenements?type=conference" },
@@ -167,6 +173,7 @@ export const FOOTER_LINKS: NavGroup[] = [
       { label: "Catalogue des formations", href: "/formations" },
       { label: "Rejoindre la communauté", href: "/communaute" },
       { label: "Événements", href: "/evenements" },
+      { label: "Campus Builder Afrique", href: "/campus-builder" },
       { label: "Questions fréquentes", href: "/ressources/faq" },
     ],
   },
